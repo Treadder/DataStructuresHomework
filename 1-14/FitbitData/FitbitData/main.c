@@ -19,7 +19,7 @@ int main(void) {
         printf(fgets(line, 100, data)); //next line should be header
         
         FitbitData first_entry = parse_to_fitbit(fgets(line, 100, data));  //next line should be first record              
-        printf(first_entry.patient);
+        printf("%s%s\n", "patient ID: ", first_entry.patient);
 
         while(counter < 1440 && fgets(line, 100, data)) {   //going to use "while" becasue we won't add records that don't match the target patient.  Note that this executes fgets, and advances line to the next, well, line.
             
@@ -30,7 +30,25 @@ int main(void) {
                 counter++;
 
             }
-        }     
+        } 
+        // NOW THAT dayvalue is populated we can check out some data from it
+
+        printf("%s%f\n", "calories: ", total_calories(dayRecord));
+        printf("%s%f\n", "miles walked: ", total_miles_walked(dayRecord));
+        printf("%s%u\n", "floors walked: ", total_floors_walked(dayRecord));
+        printf("%s%u\n", "steps taken: ", total_steps_taken(dayRecord));
+        printf("%s%f\n", "avg heart rate: ", avg_heart_rate(dayRecord));
+        
+
+
+
+
+
+
+
+
+
+
     }
     return 0;
 }
