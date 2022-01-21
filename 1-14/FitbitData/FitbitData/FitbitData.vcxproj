@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="FitbitData.csv" />
+    <None Include="TestStruct.csv" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="record_tools.c" />

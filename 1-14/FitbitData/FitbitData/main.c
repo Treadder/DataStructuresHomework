@@ -4,6 +4,52 @@
 
 int main(void) {
 
+    //TESTS
+    
+    FILE* data1 = fopen("TestStruct.csv", "r");
+
+    if (!data1) {
+        printf("File was not opened successfully!");
+    }
+    else {
+        char line1[100];
+        printf(fgets(line1, 100, data1)); //next line should be header
+        printf("\n\n");
+
+        FitbitData test_struct = parse_to_fitbit(line1);
+        printf("%s%spatient: ", test_struct.patient, "\n");
+        printf("%f%scalories: ", test_struct.calories, "\n");
+
+
+        printf("\n\n\n");
+
+
+
+        /*  char patient[10];
+    char minute[9];
+    double calories;
+    double distance;
+    unsigned int floors;
+    unsigned int heartRate;
+    unsigned int steps;
+    Sleep sleepLevel;*/
+
+    }
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
     FitbitData dayRecord[1440] = { {"000000000", "00000000", 0.0, 0.0, 0, 0, 0, NONE} };     //stores 1 day of minute entries. Init with default struct for all entries.
 
     FILE* data = fopen("FitbitData.csv", "r");
@@ -38,16 +84,16 @@ int main(void) {
         printf("%s%u\n", "floors walked: ", total_floors_walked(dayRecord));
         printf("%s%u\n", "steps taken: ", total_steps_taken(dayRecord));
         printf("%s%f\n", "avg heart rate: ", avg_heart_rate(dayRecord));
-        
+        printf("%s%u\n", "max steps taken in 1 min: ", max_minute_steps(dayRecord));
+
+        char start_minute[9] = { '0', '0', '0', '0', '0', '0', '0', '0', '\0' };
+        char end_minute[9] = { '0', '0', '0', '0', '0', '0', '0', '0', '\0' };
 
 
+        //worst_sleep_range(dayRecord, &start_minute, &end_minute);
 
-
-
-
-
-
-
+        //printf("%s%s\n", "first min of worst sleep range: ", start_minute);
+        //printf("%s%s\n", "last min of worst sleep range: ", end_minute);
 
     }
     return 0;

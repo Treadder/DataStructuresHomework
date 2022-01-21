@@ -22,14 +22,16 @@
 
 -      You must compute the total calories burned, distance walked in miles, floors walked, and steps taken            <----Done!  
     
--      You must compute average heartrate over the 24 hour period                                                    
+-      You must compute average heartrate over the 24 hour period                       <------DOne!                             
 
--      You must report the max steps taken in one minute over the 24 hour period; if there are multiple minutes throughout the day where the max 
-        is discovered, then report the one that is the latest in the 24 hour period
+-      You must report the max steps taken in one minute over the 24 hour period; if there are multiple minutes throughout the day where the max   <----Dpme!
+        is discovered, then report the one that is the latest in the 24 hour period <----Dpme!
 
--      You must report the longest consecutive range of poor sleep; a range is defined as one or more consecutive minutes where the sleepLevel > 1; 
+-      You must report the longest consecutive range of poor sleep; a range is defined as one or more consecutive minutes where the sleepLevel > 1;       <<<<<<<    
         the poorest sleep is not based on the length of the range, but the sum of the sleep levels in the range; the max sum of the ranges is considered 
-            the poorest sleep (report the starting and ending minutes of range)
+            the poorest sleep (report the starting and ending minutes of range)          The problem is my lack of handling blank entries i think
+
+
 
 -      You must open “Results.csv” for mode write; this will either create a new .csv or overwrite an existing one
 
